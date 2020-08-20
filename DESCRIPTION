@@ -14,3 +14,5 @@ Imports:
     tibble,
     haven,
     rlang
+URL: https://github.com/dmbwebb/trackr
+BugReports: https://github.com/dmbwebb/trackr/issues
