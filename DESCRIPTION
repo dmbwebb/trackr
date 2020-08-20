@@ -13,6 +13,7 @@ Imports:
     dplyr,
     tibble,
     haven,
-    rlang
+    rlang,
+    tidyselect
 URL: https://github.com/dmbwebb/trackr
 BugReports: https://github.com/dmbwebb/trackr/issues

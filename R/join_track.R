@@ -20,7 +20,7 @@ join_track <- function(x, y, by = NULL, suffix = c(".x", ".y"),
     by_cols_df <- by %>%
       tibble::enframe() %>%
       rlang::set_names(c("l", "r")) %>%
-      dplyr::mutate(across(everything, haven::zap_empty)) %>%
+      dplyr::mutate(dplyr::across(tidyselect::everything(), haven::zap_empty)) %>%
       dplyr::mutate(l = dplyr::coalesce(l,r),
              r = dplyr::coalesce(r, l))
 
