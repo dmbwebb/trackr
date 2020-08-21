@@ -1,5 +1,13 @@
-print_all <- function(dat) {
-  print(dat, n = Inf)
+#' Prints all rows of a tibble
+#'
+#' @param data
+#'
+#' @return
+#' @export
+#'
+#' @examples
+print_all <- function(data) {
+  print(data, n = Inf)
 }
 
 #' Last non-NA in a vector
