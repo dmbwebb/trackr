@@ -9,8 +9,8 @@
 #'
 #' @examples
 count_nas <- function(data, sort = FALSE, return_count = FALSE) {
-  nas <- colSums(is.na(data)) %>% enframe
-  vals <- colSums(!is.na(data)) %>% enframe
+  nas <- colSums(is.na(data)) %>% tibble::enframe
+  vals <- colSums(!is.na(data)) %>% tibble::enframe
 
   both <- nas %>%
     dplyr::inner_join(vals, by = "name") %>%
