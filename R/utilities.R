@@ -7,11 +7,7 @@
 #'
 #' @examples
 print_all <- function(data) {
-<<<<<<< HEAD
   print(data, n = Inf)
-=======
-  print(dat, n = Inf)
->>>>>>> 0646dda640c5d0af8b88150f17fe6fe3528dc3a2
 }
 
 #' Last non-NA in a vector
