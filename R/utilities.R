@@ -1,4 +1,12 @@
-print_all <- function(dat) {
+#' Prints all rows of a tibble
+#'
+#' @param data
+#'
+#' @return
+#' @export
+#'
+#' @examples
+print_all <- function(data) {
   print(dat, n = Inf)
 }
 
