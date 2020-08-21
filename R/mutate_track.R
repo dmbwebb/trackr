@@ -57,15 +57,17 @@ mutate_track <- function(.data, ...) {
 
   edited_vars <- dplyr:::mutate_cols(.data, ...) %>% names()
 
-  # harsh_equal <- function(x, y) {
-  #   x == y | (is.na(x) & is.na(y)) | !(!is.na(x) & is.na(y)) | !(is.na(x) & !is.na(y))
-  # }
+  harsh_equal <- function(x, y) {
+    st_equal <- x == y
+    both_nas <- is.na(x) & is.na(y)
+    dplyr::if_else(is.na(st_equal), both_nas, st_equal)
+  }
 
   for (var in edited_vars) {
     old_x <- .data[[var]]    # this will return null if it doesn't exist in old df
     new_x <- new_df[[var]]
 
-    n_changes <- sum(!identical(old_x, new_x))
+    n_changes <- sum(!harsh_equal(old_x, new_x))
     n_new_nas <- sum(!is.na(old_x) & is.na(new_x))
 
     if (is.null(old_x)) {
