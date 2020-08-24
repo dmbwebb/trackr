@@ -58,6 +58,8 @@ first_non_na <- function(x) {
   x_no_na <- x[!is.na(x)]
   x_type <- typeof(x)
   x_class <- class(x)
+  x_attr <- attributes(x)
+
   if (length(x_no_na) > 0) dplyr::first(x_no_na)
   else if (length(x_no_na) == 0) {
 
