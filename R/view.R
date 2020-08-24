@@ -106,6 +106,8 @@ view_n <- function(data, n = 200, by_group = TRUE) {
 
   }
 
+  invisible(data)
+
 }
 
 
@@ -126,6 +128,8 @@ view_filter <- function(data, ..., n = 200, by_group = TRUE) {
     dplyr::filter(...) %>%
     view_n(n = n, by_group = by_group)
 
+  invisible(data)
+
 }
 
 #' View a randomly selected sample of observations after selecting only some variables to view
@@ -144,5 +148,7 @@ view_select <- function(data, ..., n = 200, by_group = TRUE) {
   data %>%
     dplyr::select(...) %>%
     view_n(n = n, by_group = by_group)
+
+  invisible(data)
 
 }
