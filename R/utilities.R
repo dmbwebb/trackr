@@ -89,8 +89,8 @@ first_non_na <- function(x) {
 #' @examples
 max_na <- function(...) {
   suppressWarnings(max_val <- max(..., na.rm = T))
-  max_no_inf <- ifelse(is.infinite(max_val), NA, max_val)
-  max_no_inf
+  max_val[is.infinite(min_val)] <- NA_real_
+  max_val
 }
 
 #' Calculate max of a vector or return NA if there are no non-missing values to calculate from
@@ -104,9 +104,9 @@ max_na <- function(...) {
 #' @examples
 min_na <- function(...) {
   suppressWarnings(min_val <- min(..., na.rm = T))
-  ifelse(is.infinite(min_val), NA, min_val)
+  min_val[is.infinite(min_val)] <- NA_real_
+  min_val
 }
-
 
 #' Calculate mean of a vector or return NA if there are no non-missing values to calculate from
 #' Useful for summarising

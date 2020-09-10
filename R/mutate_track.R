@@ -64,7 +64,7 @@ mutate_track <- function(.data, ...) {
   }
 
   for (var in edited_vars) {
-    old_x <- .data[[var]]    # this will return null if it doesn't exist in old df
+    old_x <- .data[[var]]     # this will return null if it doesn't exist in old df
     new_x <- new_df[[var]]
 
     n_changes <- sum(!harsh_equal(old_x, new_x))
