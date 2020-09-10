@@ -89,7 +89,7 @@ first_non_na <- function(x) {
 #' @examples
 max_na <- function(...) {
   suppressWarnings(max_val <- max(..., na.rm = T))
-  max_val[is.infinite(min_val)] <- NA_real_
+  max_val[is.infinite(max_val)] <- NA_real_
   max_val
 }
 
