@@ -3,7 +3,7 @@
 export(count_nas)
 export(count_print)
 export(count_prop)
-export(drop_na_count)
+export(drop_na_track)
 export(filter_track)
 export(first_non_na)
 export(full_join_track)
