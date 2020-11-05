@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-drop_na_count <- function(data, ...) {
+drop_na_track <- function(data, ...) {
 
   dat_dropped <- drop_na(data, ...)
 
