@@ -32,6 +32,7 @@ last_non_na <- function(x) {
     if (x_type == "character") out <- NA_character_
     # else if (x_class == "Date") NA_Date_
     # else if (x_class == "factor") NA_factor_
+    else if (x_type == "logical") out <- NA
     else if (x_type == "double") out <- NA_real_
     else if (x_type == "integer") out <- NA_integer_
 
@@ -66,6 +67,7 @@ first_non_na <- function(x) {
     if (x_type == "character") out <- NA_character_
     # else if (x_class == "Date") NA_Date_
     # else if (x_class == "factor") NA_factor_
+    else if (x_type == "logical") out <- NA
     else if (x_type == "double") out <- NA_real_
     else if (x_type == "integer") out <- NA_integer_
 
