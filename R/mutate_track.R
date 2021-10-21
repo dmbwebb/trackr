@@ -55,7 +55,7 @@ mutate_track <- function(.data, ...) {
 
   new_df <- mutate(.data, ...)
 
-  edited_vars <- dplyr:::mutate_cols(.data, ...) %>% names()
+  edited_vars <- dplyr:::mutate_cols(.data, ..., caller_env = rlang::caller_env()) %>% names()
 
   harsh_equal <- function(x, y) {
     st_equal <- x == y
