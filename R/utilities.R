@@ -171,3 +171,21 @@ median_na <- function(x) {
 replace_with_na <- function(x, values) {
   ifelse(x %in% values, NA, x)
 }
+
+
+#' Function to quickly see all columns in a df
+#'
+#' @param x data
+#' @param
+#'
+#' @return
+#' @export
+#'
+#' @examples
+print_names <- function(x) {
+  x %>% names %>% enframe %>% print_all
+  invisible(x)
+}
+
+
+
