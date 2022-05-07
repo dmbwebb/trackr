@@ -84,12 +84,12 @@ mutate_track <- function(.data, ...) {
 
 }
 
-tibble(
-  a = sample(1:100, 100, replace = TRUE),
-  b = sample(1:100, 100, replace = TRUE)
-) %>%
-  mutate_track(a = ifelse(b > 50, 20, a)) %>%
-  mutate_track(a = ifelse(b < 20, NA, a)) %>%
-  mutate_track(b = a)
+# tibble(
+#   a = sample(1:100, 100, replace = TRUE),
+#   b = sample(1:100, 100, replace = TRUE)
+# ) %>%
+#   mutate_track(a = ifelse(b > 50, 20, a)) %>%
+#   mutate_track(a = ifelse(b < 20, NA, a)) %>%
+#   mutate_track(b = a)
 
 
