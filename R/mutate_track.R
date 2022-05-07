@@ -55,7 +55,7 @@ mutate_track <- function(.data, ...) {
 
   new_df <- mutate(.data, ...)
 
-  edited_vars <- dplyr:::mutate_cols(.data, ..., caller_env = rlang::caller_env()) %>% names()
+  edited_vars <- dplyr:::mutate_cols(.data, dplyr:::dplyr_quosures(...), caller_env = rlang::caller_env()) %>% names()
 
   harsh_equal <- function(x, y) {
     st_equal <- x == y
@@ -84,12 +84,12 @@ mutate_track <- function(.data, ...) {
 
 }
 
-# tibble(
-#   a = sample(1:100, 100, replace = TRUE),
-#   b = sample(1:100, 100, replace = TRUE)
-# ) %>%
-#   mutate_track(a = ifelse(b > 50, 20, a)) %>%
-#   mutate_track(a = ifelse(b < 20, NA, a)) %>%
-#   mutate_track(b = a)
+tibble(
+  a = sample(1:100, 100, replace = TRUE),
+  b = sample(1:100, 100, replace = TRUE)
+) %>%
+  mutate_track(a = ifelse(b > 50, 20, a)) %>%
+  mutate_track(a = ifelse(b < 20, NA, a)) %>%
+  mutate_track(b = a)
 
 
