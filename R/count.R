@@ -58,10 +58,12 @@ count_print <- function(data, ...) {
 #' @examples
 count_prop <- function(data, ..., return_count = FALSE) {
   count_table <- data %>% dplyr::count(...) %>%
-    dplyr::mutate(prop = n / sum(n)) %>%
-    print_all()
+    dplyr::mutate(prop = n / sum(n))
 
   if (return_count) return(count_table)
-  else if (!return_count) invisible(data)
+  else if (!return_count) {
+    count_table %>% print_all()
+    invisible(data)
+  }
 
 }
