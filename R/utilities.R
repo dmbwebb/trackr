@@ -7,7 +7,8 @@
 #'
 #' @examples
 print_all <- function(data) {
-  print(data, n = Inf)
+  data %>% tibble::as_tibble() %>%
+    print(n = Inf)
 }
 
 #' Last non-NA in a vector
