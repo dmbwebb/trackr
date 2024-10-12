@@ -10,9 +10,6 @@ min_na(...)
 \arguments{
 \item{...}{}
 }
-\value{
-
-}
 \description{
 Calculate max of a vector or return NA if there are no non-missing values to calculate from
 Useful for summarising

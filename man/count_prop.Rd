@@ -13,9 +13,6 @@ count_prop(data, ..., return_count = FALSE)
 
 \item{return_count}{logical. If FALSE, the count is printed, and the dataset is invisibly returned. If TRUE, the count itself is returned.}
 }
-\value{
-
-}
 \description{
 Create a relative frequency table and print
 }

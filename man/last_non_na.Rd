@@ -10,9 +10,6 @@ last_non_na(x)
 \arguments{
 \item{x}{vector}
 }
-\value{
-
-}
 \description{
 Last non-NA in a vector
 Calculate the last value in a vector that's not an NA, otherwise return NA

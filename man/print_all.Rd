@@ -9,9 +9,6 @@ print_all(data)
 \arguments{
 \item{data}{}
 }
-\value{
-
-}
 \description{
 Prints all rows of a tibble
 }

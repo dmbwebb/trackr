@@ -15,9 +15,6 @@ view_filter(data, ..., n = 200, by_group = TRUE)
 
 \item{by_group}{If TRUE, then view n randomly selected groups, if false then view n randomly selected rows}
 }
-\value{
-
-}
 \description{
 View a randomly selected sample of observations after applying a filter
 }

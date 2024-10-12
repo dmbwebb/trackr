@@ -13,9 +13,6 @@ view_n(data, n = 200, by_group = TRUE)
 
 \item{by_group}{If TRUE, then view n randomly selected groups, if false then view n randomly selected rows}
 }
-\value{
-
-}
 \description{
 Randomly view N rows
 }

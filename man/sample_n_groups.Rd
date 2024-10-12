@@ -9,9 +9,6 @@ sample_n_groups(data, n)
 \arguments{
 \item{n}{numeric, how many groups to sample}
 }
-\value{
-
-}
 \description{
 Sample n groups in a grouped dataset
 }

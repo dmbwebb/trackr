@@ -11,9 +11,6 @@ replace_with_na(x, values)
 
 \item{values}{values to replace with NA}
 }
-\value{
-
-}
 \description{
 Replace with NA if certain value
 }

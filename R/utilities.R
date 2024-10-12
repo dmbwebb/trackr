@@ -190,3 +190,39 @@ print_names <- function(x) {
 
 
 
+#' Function to check which variables differ across two rows
+#'
+#' @param tibble_data
+#' @param k
+#'
+#' @return
+#' @export
+#'
+#' @examples
+check_row_diff <- function(tibble_data, k = 1) {
+  # Check that k is valid
+  if (k <= 0 || k >= nrow(tibble_data)) {
+    stop("k should be a positive integer less than the number of rows in the tibble")
+  }
+
+  # Extract rows k and k+1
+  row_k <- tibble_data %>% slice(k)
+  row_k_plus_1 <- tibble_data %>% slice(k + 1)
+
+  # Compare the two rows
+  differing_vars <- names(row_k)[which(row_k != row_k_plus_1)]
+
+  # Output a tibble with the differences
+  if (length(differing_vars) == 0) {
+    message("No differences between row ", k, " and row ", k + 1)
+  } else {
+    differences_tibble <- tibble(
+      variable = differing_vars,
+      value_row_k = unlist(row_k[differing_vars]),
+      value_row_k_plus_1 = unlist(row_k_plus_1[differing_vars])
+    )
+    print(differences_tibble)
+  }
+}
+
+

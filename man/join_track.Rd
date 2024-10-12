@@ -29,9 +29,6 @@ join_track(
 
 \item{...}{Other functions passed to the _join function}
 }
-\value{
-
-}
 \description{
 Join two datasets and see how many matches there are
 }

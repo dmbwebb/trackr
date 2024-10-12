@@ -11,9 +11,6 @@ mutate_track(.data, ...)
 
 \item{...}{arguments to pass to mutate}
 }
-\value{
-
-}
 \description{
 Track what changes are made when you mutate
 }

@@ -11,9 +11,6 @@ count_print(data, ...)
 
 \item{...}{other arguments to pass from count}
 }
-\value{
-
-}
 \description{
 Count in middle of a pipeline and print
 }

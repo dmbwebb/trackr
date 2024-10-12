@@ -10,9 +10,6 @@ first_non_na(x)
 \arguments{
 \item{x}{vector}
 }
-\value{
-
-}
 \description{
 First non-NA in a vector
 Calculate the first value in a vector that's not an NA, otherwise return NA

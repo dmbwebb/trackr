@@ -10,9 +10,6 @@ mean_na(x)
 \arguments{
 \item{x}{vector}
 }
-\value{
-
-}
 \description{
 Calculate mean of a vector or return NA if there are no non-missing values to calculate from
 Useful for summarising

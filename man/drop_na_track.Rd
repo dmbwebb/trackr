@@ -9,9 +9,6 @@ drop_na_track(data, ...)
 \arguments{
 \item{...}{arguments to pass to drop_na}
 }
-\value{
-
-}
 \description{
 drop_na and see how many you drop
 }

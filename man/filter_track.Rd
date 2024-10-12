@@ -11,9 +11,6 @@ filter_track(data, ...)
 
 \item{...}{other arguments to pass to filter}
 }
-\value{
-
-}
 \description{
 Filter and show count
 }

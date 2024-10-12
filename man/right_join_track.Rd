@@ -9,9 +9,6 @@ right_join_track(x, y, by = NULL, suffix = c(".x", ".y"), .merge = FALSE, ...)
 \arguments{
 \item{...}{}
 }
-\value{
-
-}
 \description{
 right_join that shows how many rows match
 }

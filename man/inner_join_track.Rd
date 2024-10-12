@@ -19,9 +19,6 @@ inner_join_track(x, y, by = NULL, suffix = c(".x", ".y"), .merge = FALSE, ...)
 
 \item{...}{}
 }
-\value{
-
-}
 \description{
 inner_join that shows how many rows match
 }
