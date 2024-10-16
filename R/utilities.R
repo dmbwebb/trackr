@@ -206,8 +206,8 @@ check_row_diff <- function(tibble_data, k = 1) {
   }
 
   # Extract rows k and k+1
-  row_k <- tibble_data %>% slice(k)
-  row_k_plus_1 <- tibble_data %>% slice(k + 1)
+  row_k <- tibble_data[k, ]
+  row_k_plus_1 <- tibble_data[k+1, ]
 
   # Compare the two rows
   differing_vars <- names(row_k)[which(row_k != row_k_plus_1)]
